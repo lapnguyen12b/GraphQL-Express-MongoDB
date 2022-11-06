@@ -25,3 +25,29 @@ query books{
   }
 }
 ```
+# Mutation
+```bash
+mutation createBook {
+  createBook(id: 4, name: "Gio dau mua", genre: "Truyen ngan", authorId: 3) {
+    id
+    name
+    genre
+    author {
+      id
+      name
+    }
+  }
+}
+```
+```bash
+mutation createAuthor {
+  createAuthor(id: 4, name: "Thach Lam", age: 99) {
+    id
+    name
+    age
+    books {
+      name
+    }
+  }
+}
+```

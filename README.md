@@ -51,3 +51,31 @@ mutation createAuthor {
   }
 }
 ```
+# MongoDB
+.env
+```bash
+MONGODB_URL="mongodb+srv://admin:1234@graphql-test.yyy1qci.mongodb.net/?retryWrites=true&w=majority"
+```
+Create Data 
+```bash
+mutation createAuthor {
+  createAuthor(name: "Ngo Tat To", age: 98) {
+    id
+    name
+    age
+  }
+}
+```
+```bash
+mutation createBook {
+  createBook(name: "Tat Den", genre: "Tieu thuyet", authorId: "636771c6e25d17f9a8a09d5d") {
+    id
+    name
+    genre
+    author {
+      id
+      name
+    }
+  }
+}
+```

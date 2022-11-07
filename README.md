@@ -79,3 +79,23 @@ mutation createBook {
   }
 }
 ```
+Update Data
+```bash
+mutation updateBook{
+  updateBook(id: "63692cfb6860487af7be9a38", authorId: "63692dc06860487af7be9a44") {
+    id
+    name
+    genre
+    author {
+      id
+      name
+    }
+  }
+}
+```
+Delete Data
+```bash
+mutation deleteBook {
+  deleteBook(id: "63692cfb6860487af7be9a38")
+}
+```

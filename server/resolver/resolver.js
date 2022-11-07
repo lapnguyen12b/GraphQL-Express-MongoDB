@@ -18,7 +18,11 @@ const resolvers = {
     createAuthor: async (_parent, args, context) => {
       return context.mongoDataMethods.createAuthor(args)
     },
-    createBook: async (_parent, args, {mongoDataMethods}) => mongoDataMethods.createBook(args)
+    createBook: async (_parent, args, { mongoDataMethods }) => mongoDataMethods.createBook(args),
+    updateBook: async (_parent, args, { mongoDataMethods }) => mongoDataMethods.updateBook(args),
+    updateAuthor: async (_parent, args, { mongoDataMethods }) => mongoDataMethods.updateAuthor(args),
+    deleteBook: async (_parent, { id }, { mongoDataMethods }) => mongoDataMethods.deleteBook(id),
+    deleteAuthor: async (_parent, { id }, { mongoDataMethods }) => mongoDataMethods.deleteAuthor(id)
   }
 
 }
